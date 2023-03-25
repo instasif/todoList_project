@@ -13,8 +13,16 @@ const TodoTexts = ({ task, toggleComplete, deleteTodo, editTodo }) => {
         {task.task}
       </p>
       <div>
-        <FontAwesomeIcon icon={faPenSquare} onClick={() => editTodo(task.id)} />
-        <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} />
+        <FontAwesomeIcon
+          icon={faPenSquare}
+          className="fa-pen"
+          onClick={() => editTodo(task.id)}
+        />
+        <FontAwesomeIcon
+          className="fa-trash"
+          icon={faTrash}
+          onClick={() => deleteTodo(task.id)}
+        />
       </div>
     </div>
   );
